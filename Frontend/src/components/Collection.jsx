@@ -103,7 +103,7 @@ const Collection = () => {
       if (searchInfo.length > 0) {
         console.log(searchInfo); // Handle the response data as needed
         setSearch(searchInfo);
-        if (window.location != "http://localhost:5174/collection") {
+        if (window.location != "http://localhost:5173/collection") {
           navigate("/collection");
         }
       } else {
