@@ -21,7 +21,7 @@ const Collection = () => {
     setIsChecked(currState);
     if (currState === false) {
       const recoverAnime = async () => {
-        const res = await axios.get(`http://localhost:3000/anime/`);
+        const res = await axios.get(`https://anime-store-backend.vercel.app/anime/`);
         setAnime(res.data);
       };
       recoverAnime();
@@ -43,7 +43,7 @@ const Collection = () => {
         }
 
         if (searchName) {
-          const res = await axios.get(`http://localhost:3000/anime/`);
+          const res = await axios.get(`https://anime-store-backend.vercel.app/anime/`);
           const requiredAnime = res.data.filter((item) =>
             item.name.includes(searchName)
           );
@@ -51,7 +51,7 @@ const Collection = () => {
 
           // console.log("the thing you searchde" + searchName);
         } else {
-          const res = await axios.get(`http://localhost:3000/anime/`);
+          const res = await axios.get(`https://anime-store-backend.vercel.app/anime/`);
           setAnime(res.data);
         }
       } catch (error) {
@@ -66,7 +66,7 @@ const Collection = () => {
     const getAnimeViaFil = async () => {
       try {
         if (filterName) {
-          const res = await axios.get(`http://localhost:3000/anime/`);
+          const res = await axios.get(`https://anime-store-backend.vercel.app/anime/`);
           const requiredAnime = res.data.filter((item) =>
             item.category.includes(filterName)
           );
