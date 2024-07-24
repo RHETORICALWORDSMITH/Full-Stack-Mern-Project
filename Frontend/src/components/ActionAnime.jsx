@@ -13,7 +13,7 @@ const ActionAnime = () => {
     const getAnime = async () => {
       try {
         console.log("working on it");
-        let res = await axios.get("http://localhost:3000/anime");
+        let res = await axios.get("https://anime-store-backend.vercel.app/anime");
         const data = res.data;
         const filterData = data.filter((item) => {
           return item.category === "Action";
