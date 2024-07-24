@@ -66,11 +66,9 @@ const Cart = () => {
     // sending post rquest to send data to the backend
     try {
       const res = await axios.post(
-        "http://localhost:3000/history/",
+        "https://anime-store-backend.vercel.app/history/",
         dataToSend
       );
-      console.log("DATA DJKNJKRENJENTBNBJNJEBNOETBJIOETBJEOBNTJJJJJJJJJJN");
-      console.log(res.data);
     } catch (error) {
       console.log("error while sending purchase history");
       console.log(error);
