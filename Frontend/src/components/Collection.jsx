@@ -165,14 +165,14 @@ const Collection = () => {
           <div className="flex gap-3">
             {filterArray.map((filter) => (
               <div key={filter} className="form-control">
-                <label className="cursor-pointer gap-3 flex items-center gap-1 md:gap-3 lg:gap-3 sm:gap-3">
+                <label className="cursor-pointer sm:gap-3 flex items-center gap-1 md:gap-3 lg:gap-3">
                   <span className="label-text dark:text-white text-black">
                     {filter}
                   </span>
                   <input
                     checked={filterName === filter && isChecked}
                     type="checkbox"
-                    className="checkbox checkbox-warning w-6 md:w-8 lg:w-8"
+                    className="checkbox checkbox-warning sm:w-6"
                     onChange={(e) => {
                       handleFilterChange(filter, e.target.checked);
                     }}
