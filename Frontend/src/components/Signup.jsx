@@ -33,7 +33,7 @@ const Signup = () => {
     let apiData = await res.json(); // return an object in which form-valid tells if the email exists or not.
     // console.log(apiData);
     
-    if (apiData.format_valid === true) {
+    if (apiData.smtp_check === true) {
       dispatch(emailTransfer({ email: data.email })); // transfer email to redux store
 
       const userInfo = {
@@ -55,7 +55,6 @@ const Signup = () => {
         }
         setTimeout(() => {
           window.location.replace(`http://localhost:5173${to}`); // to go back to the main page
-          //  navigate(from, {replace: true}); // import navigate hook to use this
         }, 1000);
       } catch (err) {
         console.log(err);
