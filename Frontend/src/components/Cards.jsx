@@ -36,61 +36,63 @@ const Cards = ({ item }) => {
           <figure>
             <img className="w-full h-80" src={item.image} alt="movie img" />
           </figure>
-          <div className="card-body">
-            <h2 className="card-title">
+          <div className="card-body min-h-52">
+            <h2 className="card-title h-9">
               {item.name}
               <div className="badge badge-secondary">{item.category}</div>
             </h2>
-            <p>{item.title}</p>
-            <div className="flex flex-col ">
-              <div className="card-actions flex justify-between selectedItems-center">
-                <div className="px-3 py-1 border rounded-full">{`${item.price}$`}</div>
+            <div className="flex flex-col gap-3 mt-4">
+              <p className="min-h-20">{item.title}</p>
+              <div className="flex flex-col ">
+                <div className="card-actions flex justify-between selectedItems-center">
+                  <div className="px-3 py-1 border rounded-full">{`${item.price}$`}</div>
+                  <div
+                    className="cursor-pointer px-2 py-1 border rounded-full hover:bg-pink-500 hover:border-none hover:text-black hover:font-bold"
+                    onClick={handleVisibility}
+                  >
+                    Order!
+                  </div>
+                </div>
                 <div
-                  className="cursor-pointer px-2 py-1 border rounded-full hover:bg-pink-500 hover:border-none hover:text-black hover:font-bold"
-                  onClick={handleVisibility}
+                  className={`justify-between mt-5 transition-all ease-in-out duration-200 ${
+                    visibility ? "flex" : "hidden"
+                  }`}
                 >
-                  Order!
-                </div>
-              </div>
-              <div
-                className={`justify-between mt-5 transition-all ease-in-out duration-200 ${
-                  visibility ? "flex" : "hidden"
-                }`}
-              >
-                <div className="flex selectedItems-center gap-5">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-8"
-                    viewBox="0 -960 960 960"
-                    fill="#EAC452"
-                    onClick={() => dispatch(decrement({ id: item.id }))}
-                  >
-                    <path d="M200-446.67v-66.66h560v66.66H200Z" />
-                  </svg>
+                  <div className="flex selectedItems-center gap-5">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-8"
+                      viewBox="0 -960 960 960"
+                      fill="#EAC452"
+                      onClick={() => dispatch(decrement({ id: item.id }))}
+                    >
+                      <path d="M200-446.67v-66.66h560v66.66H200Z" />
+                    </svg>
 
-                  <p className="text-2xl dark:text-white text-black">
-                    {noItem}
-                  </p>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-8"
-                    viewBox="0 -960 960 960"
-                    fill="#EAC452"
-                    onClick={() => dispatch(increment({ id: item.id }))}
-                  >
-                    <path d="M446.67-446.67H200v-66.66h246.67V-760h66.66v246.67H760v66.66H513.33V-200h-66.66v-246.67Z" />
-                  </svg>
-                </div>
+                    <p className="text-2xl dark:text-white text-black">
+                      {noItem}
+                    </p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-8"
+                      viewBox="0 -960 960 960"
+                      fill="#EAC452"
+                      onClick={() => dispatch(increment({ id: item.id }))}
+                    >
+                      <path d="M446.67-446.67H200v-66.66h246.67V-760h66.66v246.67H760v66.66H513.33V-200h-66.66v-246.67Z" />
+                    </svg>
+                  </div>
 
-                <button
-                  className="px-4 py-1 rounded-md text-white bg-pink-500 dark:bg-pink-700 hover:text-black hover:bg-pink-700 duration-200"
-                  onClick={() => {
-                    handleBuy();
-                  }}
-                  disabled={noItem === 0}
-                >
-                  Buy
-                </button>
+                  <button
+                    className="px-4 py-1 rounded-md text-white bg-pink-500 dark:bg-pink-700 hover:text-black hover:bg-pink-700 duration-200"
+                    onClick={() => {
+                      handleBuy();
+                    }}
+                    disabled={noItem === 0}
+                  >
+                    Buy
+                  </button>
+                </div>
               </div>
             </div>
           </div>
