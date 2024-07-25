@@ -172,7 +172,7 @@ const Collection = () => {
                   <input
                     checked={filterName === filter && isChecked}
                     type="checkbox"
-                    className="checkbox checkbox-warning  sm:w-6"
+                    className="checkbox checkbox-warning w-6 md:w-8 lg:w-8"
                     onChange={(e) => {
                       handleFilterChange(filter, e.target.checked);
                     }}
