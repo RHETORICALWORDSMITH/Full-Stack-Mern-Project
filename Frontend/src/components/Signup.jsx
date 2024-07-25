@@ -53,9 +53,7 @@ const Signup = () => {
           toast.success("Signup successful!");
           localStorage.setItem("userInfo", JSON.stringify(res.data));
         }
-        // setTimeout(() => {
-        //   window.location.replace(`http://localhost:5173${to}`); // to go back to the main page
-        // }, 1000);
+       
         setTimeout(() => {
               window.location.replace(`${window.location.origin}${to}`);
         }, 1000);
