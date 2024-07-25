@@ -129,7 +129,9 @@ const Cart = () => {
         </div>
       </div>
 
-      <CartCards />
+    <div className="flex flex-col items-center">
+        <CartCards />
+      </div>
       <Footer />
     </>
   );
