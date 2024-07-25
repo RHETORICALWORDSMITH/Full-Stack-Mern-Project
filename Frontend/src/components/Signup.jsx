@@ -30,7 +30,7 @@ const Signup = () => {
     let email = data.email;
     let url = `https://api.emailvalidation.io/v1/info?apikey=${key}&email=${email}`;
     let res = await fetch(url); // axios can not used in here
-    let apiData = await res.json(); // return an object in which form-valid tells if the email exists or not.
+    let apiData = await res.json(); // return an object in which smtp_check tells if the email exists or not.
     // console.log(apiData);
     
     if (apiData.smtp_check === true) {
