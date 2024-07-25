@@ -78,11 +78,11 @@ const ActionAnime = () => {
     <>
       <div className="max-w-screen-2xl flex flex-col items-center justify-center container mx-auto md:px-20 px-4">
         <div>
-          <h1 className="font-semibold flex flex-col justify-center items-center text-xl pb-2 text-yellow-500">
+          <h1 className="font-semibold flex flex-col justify-center items-center text-4xl pb-2 text-yellow-500">
             Popular Genere
           </h1>
           <p>
-            Dive into our thrilling action anime collection! Buy now! 
+            Buy our thrilling action anime collection! 
           </p>
         </div>
 
