@@ -78,15 +78,11 @@ const ActionAnime = () => {
     <>
       <div className="max-w-screen-2xl flex flex-col items-center justify-center container mx-auto md:px-20 px-4">
         <div>
-          <h1 className="font-semibold text-xl pb-2 text-yellow-500">
+          <h1 className="font-semibold flex flex-col justify-center items-center text-xl pb-2 text-yellow-500">
             Popular Genere
           </h1>
           <p>
-            Dive into our thrilling action anime collection! Experience epic
-            battles, heroic journeys, and powerful friendships as our characters
-            face overwhelming odds and strive for greatness. Whether it's
-            ninjas, pirates, or soul reapers, each story promises intense action
-            and unforgettable moments!
+            Dive into our thrilling action anime collection! Buy now! 
           </p>
         </div>
 
