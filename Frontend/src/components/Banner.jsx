@@ -42,15 +42,12 @@ const Banner = () => {
           <div className="space-y-12">
             <h1 className="text-4xl font-bold">
               Welcome to the{" "}
-              <span className="text-purple-500">Anime Store!</span>
+              <span className="text-purple-500 animate-pulse">Anime Store!</span>
             </h1>
             <p className="text-xl">
-              Immerse yourself in a world of anime at our store, where you'll
+               Immerse yourself in a world of anime at our store, where you'll
               find everything from manga to collectible figurines and stylish
-              apparel. Explore a curated selection that celebrates the diverse
-              and captivating stories of your favorite series. Whether you're a
-              seasoned fan or new to anime, discover treasures that bring your
-              favorite characters to life.
+              apparel.
             </p>
 
             <label className="input border border-gray-400 rounded-md flex bg-white dark:bg-slate-900 md:hidden">
