@@ -22,6 +22,6 @@ export default {
       addUtilities(newUtilities)
     }
   ],
-  darkMode: 'selector',
+  darkMode: 'class',
  
 }
