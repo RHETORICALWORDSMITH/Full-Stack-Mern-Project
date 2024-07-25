@@ -7,10 +7,7 @@ import { useSelector } from "react-redux";
 
 const PurchaseHistory = () => {
   const currEmail = useSelector((state) => state.email.currEmail);
-  console.log("currEmail");
-  console.log(currEmail);
   const [history, setHistory] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [isHistory, setisHistory] = useState(false);
 
@@ -28,17 +25,12 @@ const PurchaseHistory = () => {
       } catch (err) {
         console.error(err);
         setError(err);
-      } finally {
-        setLoading(false); // Set loading to false when done
-      }
+      } 
     };
 
     getHistory();
   }, []);
-  console.log("history");
-  console.log(history);
 
-  if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
   return (
