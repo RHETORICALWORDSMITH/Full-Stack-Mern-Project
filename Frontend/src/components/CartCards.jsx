@@ -22,9 +22,12 @@ const CartCards = () => {
 
   const dispatch = useDispatch();
   //for visibilty of an element
-  const [visibility, setVisibility] = useState(false);
-  const handleVisibility = () => {
-    setVisibility(!visibility);
+  const [visibility, setVisibility] = useState({});
+  const handleVisibility = (id) => {
+    setVisibility((prevVisibility) => ({
+      ...prevVisibility,
+      [id]: !prevVisibility[id],
+    }));
   };
 
   //emptyCart
@@ -39,7 +42,6 @@ const CartCards = () => {
           })
         );
       });
-      // boughtItems = []; // reset the items
       console.log("super important");
       console.log(boughtItems);
     }, 1000);
@@ -77,14 +79,16 @@ const CartCards = () => {
                           </div>
                           <div
                             className="cursor-pointer px-2 py-1 border rounded-full hover:bg-pink-500 hover:border-none hover:text-black hover:font-bold"
-                            onClick={handleVisibility}
+                            onClick={() => {
+                              handleVisibility(boughtItem.id);
+                            }}
                           >
                             Modify
                           </div>
                         </div>
                         <div
                           className={`justify-between absolute gap-16 bottom-5 mt-5 transition-all ease-in-out duration-200 ${
-                            visibility ? "flex" : "hidden"
+                            visibility[boughtItem.id] ? "flex" : "hidden"
                           }`}
                         >
                           <div className="flex items-center gap-5">
