@@ -117,7 +117,7 @@ const Collection = () => {
       <div className="mt-28 flex flex-col items-center justify-center">
         <h1 className="text-2xl md:text-4xl">
           Explore the Vast{" "}
-          <span className="text-purple-500">{`Collection! :)`}</span>
+          <span className="text-purple-500 animate-pulse">{`Collection! :)`}</span>
         </h1>
         <p className="mt-12 text-center">
           Explore an expansive collection of anime, featuring a diverse range of
