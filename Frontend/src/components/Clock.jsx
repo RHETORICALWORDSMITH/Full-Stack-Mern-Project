@@ -8,7 +8,7 @@ const Clock = () => {
         <div className="space-y-12">
           <h1 className="text-4xl font-bold">
             Find your purchase history{" "}
-            <span className="text-purple-500">here!</span>
+            <span className="text-purple-500 animate-pulse">here!</span>
           </h1>
           <p className="text-xl">
             Your purchase history provides a detailed record of all your past
