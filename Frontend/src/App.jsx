@@ -12,14 +12,9 @@ import PurchaseHistory from "./components/PurchaseHistory.jsx";
 function App() {
   const [authUser, setAuthUser] = useAuth();
 
-  // console.log("this is for auth")
-  // console.log(authUser);
-
   return (
     <>
       <SearchProvider>
-        {/* <Home />
-      <Collection /> */}
         <div className="bg-white text-black dark:bg-slate-900 dark:text-white">
           <Routes>
             <Route path="/" element={<Home />} />
