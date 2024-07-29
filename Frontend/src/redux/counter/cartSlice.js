@@ -6,29 +6,6 @@ const initialState = {
     : [], // Load from local storage or set empty array
 };
 
-// export const cartSlice = createSlice({
-//   name: "purchasedItems",
-//   initialState,
-//   reducers: {
-//     addToCart: (state, action) => {
-//       const { item, noItem } = action.payload;
-//       if (purchasedItems.includes(item)) {
-//         const index = purchasedItems.indexOf(item);
-//         const valueToReplace = (state.purchasedItems[indexItemIn].noItem = noItem); // Store the value at the found index
-//         console.log("Value replaced:", valueToReplace);
-//       } else {
-//         item.noItem = noItem;
-//         state.purchasedItems.push(item);
-//         console.log("Item added to cart:", item);
-//         localStorage.setItem(
-//           "purchasedItems",
-//           JSON.stringify(current(state.purchasedItems))
-//         ); // Save to local storage
-//         console.log("The cart looks like this:", current(state.purchasedItems));
-//       }
-//     },
-//   },
-// });
 export const cartSlice = createSlice({
   name: "purchasedItems",
   initialState,
