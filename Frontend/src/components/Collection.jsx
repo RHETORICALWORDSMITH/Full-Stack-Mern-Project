@@ -100,7 +100,7 @@ const Collection = () => {
       if (searchInfo.length > 0) {
         console.log(searchInfo); // Handle the response data as needed
         setSearch(searchInfo);
-        if (window.location != "http://localhost:5173/collection") {
+        if (window.location != "https://anime-store-frontend.vercel.app/collection") {
           navigate("/collection");
         }
       } else {
