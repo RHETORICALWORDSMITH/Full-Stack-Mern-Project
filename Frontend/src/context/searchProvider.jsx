@@ -1,7 +1,7 @@
 import React, { createContext, useState, useContext } from "react";
 
 //creating context
-export const searchContext = createContext(); // 0 is the initial value in this case
+export const searchContext = createContext(); 
 
 //creating provider
 const SearchProvider = ({ children }) => {
